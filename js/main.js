@@ -82,7 +82,7 @@ window.TrelloPowerUp.initialize(
                 id: 'Spells', // optional if you aren't using a function for the title
                 claimed: claimed,
                 icon: GRAY_ICON, // Must be a gray icon, colored icons not allowed.
-                title: 'D&D Beyond: Spells',
+                title: 'D&D Beyond - Spells',
                 content: 
                 {
                     type: 'iframe',
