@@ -39,8 +39,10 @@ t.render(function ()
                 div.classList.add("spellCard");
                 container.appendChild(div);
                 
+                var spellName = getTitle(url);
                 var spellNameElm = document.createElement('h1');
-                spellNameElm.innerHTML = getTitle(url);
+                spellNameElm.innerHTML = spellName;
+                div.appendChild(spellNameElm);
             }
         })
         .then(function () 
