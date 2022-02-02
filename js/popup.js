@@ -10,11 +10,13 @@ function getSourceAsDOM(url)
 
 var t = TrelloPowerUp.iframe();
 
-document.querySelector('#search').oninput = function()
+document.querySelector('#search').addEventListener('input', function()
 {
     var dom = getSourceAsDOM("https://www.dndbeyond.com/search?q=" + this.value);
+    console.log(dom);
+    console.log(dom.querySelector('a.link'));
     document.querySelector('p').innerHTML = dom.querySelector('a.link');
-}
+});
 
 // Elements with IDs are available as properties of `window`.
 window.estimate.addEventListener('submit', function (event) 
