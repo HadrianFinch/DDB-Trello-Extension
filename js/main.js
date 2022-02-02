@@ -6,22 +6,22 @@ var GRAY_ICON = 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4b
 
 window.TrelloPowerUp.initialize(
 {
-    // 'card-buttons': function (t, options) 
-    // {
-    //     return [
-    //     {
-    //         icon: GREY_ROCKET_ICON,
-    //         text: 'Estimate Size',
-    //         callback: function (t) 
-    //         {
-    //             return t.popup(
-    //             {
-    //                 title: "Estimation",
-    //                 url: './popup.html',
-    //             });
-    //         }
-    //     }];
-    // },
+    'card-buttons': function (t, options) 
+    {
+        return [
+        {
+            icon: './icon.png',
+            text: 'Add Content',
+            callback: function (t) 
+            {
+                return t.popup(
+                {
+                    title: "Add D&D Beyond Content",
+                    url: './popup.html',
+                });
+            }
+        }];
+    },
     // 'card-badges': function (t, options) 
     // {
     //     return t.get('card', 'shared', 'estimate')
