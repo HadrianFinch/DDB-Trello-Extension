@@ -10,12 +10,10 @@ function getSourceAsDOM(url)
 
 var t = TrelloPowerUp.iframe();
 
-document.querySelector('#search').addEventListener('input', function()
+document.querySelector('#add').addEventListener('click', function()
 {
-    var dom = getSourceAsDOM("https://www.dndbeyond.com/search?q=" + this.value);
-    console.log(dom);
-    console.log(dom.querySelector('a.link'));
-    document.querySelector('p').innerHTML = dom.querySelector('a.link');
+    var term = document.querySelector('#search').value;
+    t.attach("https://www.dndbeyond.com/search?q=" + term);
 });
 
 t.render(function() 
